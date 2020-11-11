@@ -3,7 +3,7 @@ package jm.task.core.jdbc.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "MyUser")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +13,7 @@ public class User {
     @Column
     private String name;
 
-    @Column
+    @Column(name = "surname")
     private String lastName;
 
     @Column

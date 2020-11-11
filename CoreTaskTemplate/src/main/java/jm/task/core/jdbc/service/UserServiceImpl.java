@@ -8,6 +8,8 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
     public void createUsersTable() {
+        UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+        userDaoHibernate.createUsersTable();
     }
 
     public void dropUsersTable() {
@@ -21,12 +23,17 @@ public class UserServiceImpl implements UserService {
     }
 
     public void removeUserById(long id) {
+        UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+        userDaoHibernate.removeUserById(id);
     }
 
     public List<User> getAllUsers() {
-        return null;
+        UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+        return userDaoHibernate.getAllUsers();
     }
 
     public void cleanUsersTable() {
+        UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+        userDaoHibernate.cleanUsersTable();
     }
 }

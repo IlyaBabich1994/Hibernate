@@ -21,7 +21,7 @@ public class Util {
     private static final String DB_HOST  = "localhost";
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "00000000";
-    private static final String DB_NAME = "Users";
+    private static final String DB_NAME = "users";
     private static final String DB_PORT = ":3306/";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://"
@@ -58,6 +58,7 @@ public class Util {
             settings.put(Environment.PASS, DB_PASSWORD);
             settings.put(Environment.DIALECT, DIALECT);
             settings.put(Environment.SHOW_SQL, "true");
+            //settings.put("hibernate.hbm2ddl.auto", "update");
 
             configuration.setProperties(settings);
             configuration.addAnnotatedClass(User.class);
